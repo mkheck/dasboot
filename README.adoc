@@ -1,0 +1,24 @@
+= Das Boot: Diving in debugging Spring Boot applications
+
+== Maintainer
+
+* Mark Heckler
+* mailto:mark@thehecklers.com[mark@thehecklers.com]
+* https://twitter.com/mkheck[@mkheck on Twitter]
+
+== Purpose
+
+This meta-repo accompanies my session titled *"Das Boot: Diving in debugging Spring Boot applications"* and includes all code written within the session and potentially more. I'll update and add to these repos as the session evolves and/or as I think of more things to share.
+
+*_Star+watch this repo for updates!_*
+
+== Notes
+
+. I've disabled security on all Actuator endpoints for this demonstration. **PLEASE DO NOT DO THIS FOR YOUR PRODUCTION APPS!** This is for ease of demonstration only.
+. To browse all Actuator endpoints available, verify upon port Tomcat is using for your application (the default 8080 for the das-boot app and 9090 for das-boot-backing, as assigned in its application.properties), then substitute that port number below in a browser window tab: http://localhost:<insert_your_app_port_number_here>/actuator
+. To view traces, you must first execute the _runZipkin.sh_ script in this repo to run Zipin using a container execution environment, e.g. Docker Desktop, on Linux/Mac/BSD/WSL/etc. From Windows, you'll need to perform actions equivalent to those within this script to start Zipkin.
+. Zipkin runs locally on port 9411, so to view the Zipkin dashboard and find traces, visualize the trace actions between apps, etc., you can run it from any browser with http://localhost:9411
+
+== Related presentation
+
+https://speakerdeck.com/mkheck/das-boot-diving-into-debugging-spring-boot-applications["Das Boot: Diving in debugging Spring Boot applications" presentation]
